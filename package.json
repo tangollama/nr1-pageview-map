@@ -11,7 +11,7 @@
     ],
     "scripts": {
         "start": "nr1 package:serve",
-        "test": "exit 0",
+        "test": "jest",
         "eslint-check": "eslint nerdlets/",
         "eslint-fix": "eslint nerdlets/ --fix"
     },
@@ -33,6 +33,11 @@
         "email": "labs@newrelic.com"
     },
     "dependencies": {
+        "babel-plugin-syntax-class-properties": "^6.13.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-0": "^6.24.1",
         "js-base64": "^2.5.1",
         "leaflet": "^1.5.1",
         "prop-types": "^15.6.2",
@@ -47,13 +52,42 @@
         "not dead"
     ],
     "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-react": "^7.0.0",
+        "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.0.2",
+        "babel-jest": "^24.9.0",
+        "babel-plugin-transform-imports": "^2.0.0",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
         "eslint": "^6.1.0",
         "eslint-config-prettier": "^6.0.0",
         "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-react": "^7.14.3",
         "file-loader": "^4.1.0",
+        "jest": "^24.9.0",
         "prettier": "^1.18.2",
+        "react-test-renderer": "^16.9.0",
         "url-loader": "^2.1.0"
+    },
+    "jest": {
+//        "roots": [
+//        "<rootDir>",
+//        "/home/some/path/"
+//        ],
+//        "modulePaths": [
+//            "<rootDir>",
+//            "/home/some/other/path"
+//        ],
+//        "moduleDirectories": [
+//            "node_modules"
+//        ],
+//        "transform": {
+//            "^.+\\.jsx$": "babel-jest",
+//            "^.+\\.js$": "babel-jest"
+//        }
     }
 }
